@@ -1,4 +1,4 @@
-## Team Name - Project Name
+## Team Number - Project Name
 
 The participants are required to fork this repository and create a public Github repository under their own username (Single repository per team). The following created sections in this README.md need to be duly filled, highlighting the denoted points for the solution/implementation. Please feel free to create further sub-sections in this markdown, the idea is to understand the gist of the components in a singular document.
 
