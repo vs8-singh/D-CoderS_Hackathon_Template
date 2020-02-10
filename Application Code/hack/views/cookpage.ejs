@@ -1,3 +1,32 @@
 <%- include("partials/header") %>
-<h1>Cook</h1>
+<div class = "container">
+    <h1 style="text-align: center;">Add a new Dish! </h1>
+    <div style="width: 30%; margin: 30px auto;">
+        <form action="/cookpage" method="POST">
+            <div class="form-group">
+                <input type="text" class = "form-control" name="food" placeholder="name">
+            </div>
+            <div class = "form-group">
+                <input type="text" class = "form-control" name="image" placeholder="image">
+            </div>
+			<div class = "form-group">
+                <input type="number" class = "form-control" name="price" placeholder="Price" min="50" step = "10">
+            </div>
+            <div class = "form-group">
+                Type :  
+                <input type="radio" name="type" value="veg"> Veg  
+                <input type="radio" name="type" value="non-veg">Non-Veg  
+                <input type="radio" name="type" value="drinks"> Drinks  
+                <input type="radio" name="type" value="dessert"> Dessert  
+            </div>
+			<div class="form-group">
+				<textarea class = "form-control" name = "desc" placeholder="Enter a mini description" rows="4" maxlength="150"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-success btn-block">ADD!</button>
+            </div>
+        </form>
+        <a href="/" style="text-decoration: underline;">Go Back?</a>
+    </div>
+</div>
 <%- include("partials/footer") %>

@@ -1,0 +1,11 @@
+var food = [{khana:'Kadhai Paneer', type: 'veg', price: '75', image: 'https://i0.wp.com/vegecravings.com/wp-content/uploads/2016/08/kadai-paneer-gravy-recipe-step-by-step-instructions.jpg?w=1612&quality=65&strip=all&ssl=1'},
+            {khana:'Aloo Mutter', type: 'veg', price: '60', image: 'https://www.cubesnjuliennes.com/wp-content/uploads/2019/02/Punjabi-Aloo-Matar-Recipe.jpg'},
+            {khana:'Chicken Tandoori', type: 'non-veg', price: '105', image: 'https://dinnerthendessert.com/wp-content/uploads/2018/03/Tandoori-Chicken-4-688x1032.jpg'},
+            {khana:'Murg Punjabi', type: 'non-veg', price: '110', image: 'https://lh5.googleusercontent.com/-rzDrCxRw7ig/ToB_lvEejVI/AAAAAAAAHvs/TiKFkebc5cc/s640/Punjabi%2520Chicken%2520Bhuna-1.jpg'},
+            {khana:'Chocolate Shake', type: 'drinks', price: '60', image: 'https://nordicfoodliving.com/wp-content/uploads/2014/09/Recipe-for-Nordic-Healthy-Banana-and-Chocolate-Shake-683x1024.jpg'},
+            {khana:'Watermelon Blast', type: 'drinks', price: '80', image: 'https://i0.wp.com/happywelllifestyle.com/media/cooling-watermelon-lime.jpg?w=960&ssl=1'},
+            {khana:'Hot Sizzling Brownie', type: 'dessert', price: '115', image: 'https://cookingshooking.com/wp-content/uploads/2018/07/Sizzling-Brownie.jpg'},
+            {khana:'Double Chocolate Pan Cake', type: 'dessert', price: '160', image: 'http://kitchenrunway.com/wp-content/uploads/2010/02/Chocolate-Pancakes-41-630x1024.jpg'}];
+
+            var userd = [{user: 'vs', pwd:'123'},
+            {user: 'garima', pwd:'456'}];

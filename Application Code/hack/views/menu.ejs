@@ -14,26 +14,34 @@
 </nav>
     <div class = 'container'>
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="/menu/<%= name %>/menu">All Categories</a></li>
-            <li role="presentation"><a href="/menu/<%= name %>/vegmenu">Veg</a></li>
-            <li role="presentation"><a href="/menu/<%= name %>/nonvegmenu">Non Veg</a></li>
-            <li role="presentation"><a href="/menu/<%= name %>/drinksgmenu">Drinks</a></li>
-            <li role="presentation"><a href="/menu/<%= name %>/dessertmenu">Dessert</a></li>
+            <li role="presentation" class="active"><a href="#">All Categories</a></li>
+            <li role="presentation"><a href="/menu/vegmenu">Veg</a></li>
+            <li role="presentation"><a href="/menu/nonvegmenu">Non Veg</a></li>
+            <li role="presentation"><a href="/menu/drinksgmenu">Drinks</a></li>
+            <li role="presentation"><a href="/menu/dessertmenu">Dessert</a></li>
           </ul>
-        <h1>Welcome <%= name %></h1>
-        <h3>All Categories</h3>
+          <header class = "jumbotron">
+                <h1>All Categories</h1>
+            </header>
         <div class = 'row text-center' style="display: flex; flex-wrap: wrap;">
         <% for(var i = 0; i<food.length; i++){ %>
             <div class = "col-md-3 col-sm-6" id = '<%=  %>'>
                 <div class = 'thumbnail'>
                     <img src="<%= food[i]['image'] %>">
                 </div>
+                <div class = 'caption'>
+                    <h4><%= food[i]['khana'] %></h4>
+                </div>
+                <div class = 'caption'>
+                    <%= food[i]['description'] %>
+                </div>
                 <form action="/menu/:id" method="POST">
-                    <div class = 'form-group' name= 'food' value = "<%= food[i]['khana'] %>">
-                        <h4><%= food[i]['khana'] %></h4>
+                    <div class = 'form-group' value = "<%= food[i]['khana'] %>">
+                        <input type = 'hidden' name= 'food' value = "<%= food[i]['khana'] %>">
                     </div>
                     <div class = 'form-group' name= 'price' value ="<%= food[i]['price'] %>">
                         <h5>Price: <%= food[i]['price'] %> rupees</h5>
+                        <input type = 'hidden' name= 'price' value ="<%= food[i]['price'] %>">
                     </div>
                     <div class="form-group" name = 'quantity'>Quantity: <input type="number" name="quantity"  min = '0' max = '10' value = "0"></div>
                     <div class="form-group">
