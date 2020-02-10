@@ -37,7 +37,8 @@ var cart = [];
 var cook = {name: 'steww', password:'randi'};
 var manager = {name: 'appu', password:'fizz'};
 //Databases
-
+var userd = [{user: 'vs', pwd:'123', contact: '708020908', email:'jhlabf@gmail.com'},
+            {user: 'garima', pwd:'456',contact: '708020908',email:'jhlabf@gmail.com'}];
 var fb = [{user:'vs', title:'Hygiene', feedback:'Poor Hygiene'},
             {user:'garima', title:'Non-Veg', feedback:'Kindly remove non veg from your menu please!!'}];
 app.use(bodyparser.urlencoded({extended:true}));
@@ -45,7 +46,6 @@ app.get('/',function(req,res){
     res.render('home');
 });
 //Routes
-// login
 // login
 app.get('/login',function(req,res){
     res.render('login');
@@ -55,23 +55,19 @@ app.post('/login',function(req,res){
     var pwd = req.body.password;
     for(var i = 0; i<userd.length; i++){
         if(name === userd[i]['user'] && pwd === userd[i]['pwd']){
-            res.redirect('/menu/:'+name);
+            res.redirect('/menu');
         }
     }
 });
 
 // signup
-app.post('/signup',function(req,res){
-    userd.push({user: req.body.username, pwd: req.body.password, contact: req.body.contact, email: req.body.email});
-    for(var i = 0; i<userd.length; i++){
-        console.log(userd[i]['user']);
-    }
-    res.redirect('/menu/'+req.body.username);
-});
 app.get('/signup',function(req,res){
     res.render('signup');
 });
-
+app.post('/signup',function(req,res){
+    userd.push({user: req.body.username, pwd: req.body.password, contact: req.body.contact, email: req.body.email});
+    res.redirect('/menu');
+});
 //menu
 app.get('/menu', function(req,res){
     food.find({}, function(err, food){
@@ -172,7 +168,7 @@ app.post('/menu/:id/feedback',function(req,res){
 });
 app.get("*",function(req,res){
     res.send('Sorry, page not found... What are you doing with your life??');
-
+});
 app.listen(process.env.PORT||3000,process.env.IP,function(){
-    console.log("Conected!!")
+    console.log("Conected!!");
 });
